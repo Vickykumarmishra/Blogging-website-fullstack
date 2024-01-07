@@ -80,7 +80,7 @@ useEffect(()=>{
         <div className='row'>
 
             <div className='col-lg-6 col-sm-12'>
-                <img src='login.png' className='img-fluid'></img>
+                <img src='login 11.png' className='img-fluid'></img>
             </div>
             <div className='col-lg-6 col-sm-12'>
        <div> <h1 style={{color:'#F28705'}}><b>LogIn</b></h1></div>
@@ -99,6 +99,10 @@ useEffect(()=>{
 </div>
 
 <button className='btn btn-primary faram' style={{border:"0.1rem solid #F28705",marginTop:"2rem"}}  onClick={handleLogin}>LogIn</button>
+  
+<p className="signup">
+            Not signedUp? <a href="/" style={{color:'#F28705'}}>SignUp</a>
+          </p>
 
             </div>
         </div>

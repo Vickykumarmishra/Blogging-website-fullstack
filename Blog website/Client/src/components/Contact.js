@@ -57,7 +57,7 @@ export default function Contact() {
         <Navigation></Navigation>
        
         <div className='container'> <h6>we are here to help and answer any question you might have. We look forward to hearing from you</h6></div>
-      <div className='row ' style={{border:"0.1rem solid #F28705",borderRadius:"0.5rem"}}>
+      <div className='row ' style={{borderRadius:"0.5rem"}}>
 
       <div className='col-sm-12 col-md-12 col-lg-6' style={{float:"left"}}>
         <img src="form3.png" className='img-fluid'></img>
@@ -68,17 +68,17 @@ export default function Contact() {
 
       <div class="form-floating mb-3">
     
-    <input type="text" class="form-control " id="name" style={{border:"0.1rem solid #F28705"}} placeholder="Full Name"  />
+    <input type="text" class="form-control " id="name" style={{}} placeholder="Full Name"  />
     <label for="floatingInput">Full Name</label>
   </div>
       <div class=" form-floating mb-3">
     
-    <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" style={{border:"0.1rem solid #F28705"}} placeholder="name@example.com"/>
+    <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" style={{}} placeholder="name@example.com"/>
     <label for="floatingInput">Email address</label>
   </div>
       <div class=" form-floating mb-3" style={{backgroundColor:"transparent"}}>
   
-  <textarea class="form-control " id="exampleFormControlTextarea1" rows="3" style={{border:"0.1rem solid #F28705"}} placeholder='Ask your doubt'></textarea>
+  <textarea class="form-control " id="exampleFormControlTextarea1" rows="3" style={{}} placeholder='Ask your doubt'></textarea>
   <label for="floatingPassword">Ask your doubt</label>
 </div>
 

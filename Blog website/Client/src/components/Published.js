@@ -83,14 +83,14 @@ export default function Published() {
       <img src="blog1.jpg" class="d-block w-100" alt="..." style={{height:'24rem',borderRadius:"1rem"}}/>
       <div class="carousel-caption d-none d-md-block">
         {/* <h5 style={{color:"white",backgroundColor:'#F28705'}}>BlogVista</h5> */}
-        <p style={{color:"white",backgroundColor:'#F28705'}}><b>A perfect place to express your thoughts</b></p>
+        <p style={{color:"white",backgroundColor:'#F28705',opacity:"0.8"}}><b>A perfect place to express your thoughts</b></p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="blog2.jpg" class="d-block w-100" alt="..." style={{height:'24rem',borderRadius:"1rem"}}/>
       <div class="carousel-caption d-none d-md-block"  >
         {/* <h5 style={{color:"white",backgroundColor:'#F28705'}}>BlogVista</h5> */}
-        <p style={{color:"white",backgroundColor:'#F28705'}}><b>100k+ happy client over the globe</b></p>
+        <p style={{color:"white",backgroundColor:'#F28705',opacity:"0.8"}}><b>100k+ happy client over the globe</b></p>
       </div>
     </div>
     <div class="carousel-item">
@@ -124,7 +124,7 @@ export default function Published() {
               
               
                
-              <motion.div  whileHover={{backgroundColor:"lightgrey"}}  className='card' style={{ width: 'auto',height:"auto", marginBottom: '2rem', backgroundColor: 'white'}}>
+              <motion.div  whileHover={{opacity:"0.8",backgroundColor:'lightyellow'}}  className='card' style={{ width: 'auto',height:"auto", marginBottom: '2rem', backgroundColor: 'white'}}>
                 
                   <img    src={imageUrl} className='card-img-top ' alt='...' style={{ width: 'auto',height:"17rem" }} />
               

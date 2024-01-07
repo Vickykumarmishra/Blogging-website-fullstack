@@ -65,7 +65,7 @@ export default function Signup() {
       <div className='row'>
           
           <div className='col-lg-6 col-sm-12 col-md-12'>
-            <img src='sign5.jpg' className='img-fluid'></img>
+            <img src='sign11.png' className='img-fluid'></img>
           </div>
           <div className='col-lg-6 col-sm-12 col-md-12'>
           <div style={{marginBottom:"1rem"}}> <h1 style={{color:'#F28705'}}><b>SignUp</b></h1></div>
@@ -86,7 +86,7 @@ export default function Signup() {
 
         <button type='button' className='btn btn-primary faram' style={{marginTop:'1rem',border:"0.1rem orange",border:"0.1rem solid #F28705"}} onClick={Signed}> SignUp</button>
         <p className="signin">
-            Already signedIn? <a href="/Login">Login</a>
+            Already signedUp? <a href="/Login" style={{color:"#F28705"}}>Login</a>
           </p>
           </div>
 
