@@ -66,17 +66,20 @@ export default function Contact() {
 
       <form style={{padding:'1rem'}}>
 
-      <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Full Name</label>
-    <input type="text" class="form-control " id="name" style={{border:"0.1rem solid black"}} />
+      <div class="form-floating mb-3">
+    
+    <input type="text" class="form-control " id="name" style={{border:"0.1rem solid black"}} placeholder="Full Name"  />
+    <label for="floatingInput">Full Name</label>
   </div>
-      <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" style={{border:"0.1rem solid black"}}/>
+      <div class=" form-floating mb-3">
+    
+    <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" style={{border:"0.1rem solid black"}} placeholder="name@example.com"/>
+    <label for="floatingInput">Email address</label>
   </div>
-      <div class="mb-3" style={{backgroundColor:"transparent"}}>
-  <label for="exampleFormControlTextarea1" class="form-label">Ask below</label>
-  <textarea class="form-control " id="exampleFormControlTextarea1" rows="3" style={{border:"0.1rem solid black"}}></textarea>
+      <div class=" form-floating mb-3" style={{backgroundColor:"transparent"}}>
+  
+  <textarea class="form-control " id="exampleFormControlTextarea1" rows="3" style={{border:"0.1rem solid black"}} placeholder='Ask your doubt'></textarea>
+  <label for="floatingPassword">Ask your doubt</label>
 </div>
 
 <button class="btn btn-primary faram" style={{border:'transparent'}} type="button" onClick={handleClick}>Send Message</button>
