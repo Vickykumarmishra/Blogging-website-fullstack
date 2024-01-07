@@ -128,7 +128,7 @@ export default function Published() {
                 
                   <img    src={imageUrl} className='card-img-top ' alt='...' style={{ width: 'auto',height:"17rem" }} />
               
-                <div className='card-body' style={{height:"20rem"}}>
+                <div className='card-body' style={{height:"22rem"}}>
                   <h5 className='card-title'>
                     <b>{title}</b> <i>(written by:-{writer})</i> 
                   </h5>
