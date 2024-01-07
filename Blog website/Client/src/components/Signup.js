@@ -68,7 +68,7 @@ export default function Signup() {
             <img src='sign5.jpg' className='img-fluid'></img>
           </div>
           <div className='col-lg-6 col-sm-12 col-md-12'>
-          <div style={{marginBottom:"1rem"}}> <h1><b>SignUp</b></h1></div>
+          <div style={{marginBottom:"1rem"}}> <h1 style={{color:'#F28705'}}><b>SignUp</b></h1></div>
           <div class="form-floating mb-3">
   <input type="text" class="form-control fullname" id="floatingInput1" placeholder="Full Name"/>
   <label for="floatingInput">Full Name</label>
@@ -84,7 +84,7 @@ export default function Signup() {
 
 <p style={{marginBottom:"1rem",marginTop:"1rem"}}><input type="checkbox" class="ui-checkbox"  style={{marginRight:"0.5rem"}}></input>Remember Me</p>
 
-        <button type='button' className='btn btn-primary faram' style={{marginTop:'1rem',border:"0.1rem orange"}} onClick={Signed}> SignUp</button>
+        <button type='button' className='btn btn-primary faram' style={{marginTop:'1rem',border:"0.1rem orange",border:"0.1rem solid #F28705"}} onClick={Signed}> SignUp</button>
         <p className="signin">
             Already signedIn? <a href="/Login">Login</a>
           </p>

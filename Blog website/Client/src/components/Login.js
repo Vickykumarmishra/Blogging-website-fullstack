@@ -83,7 +83,7 @@ useEffect(()=>{
                 <img src='login.png' className='img-fluid'></img>
             </div>
             <div className='col-lg-6 col-sm-12'>
-       <div> <h1><b>LogIn</b></h1></div>
+       <div> <h1 style={{color:'#F28705'}}><b>LogIn</b></h1></div>
 
        <div class="form-floating mb-3" style={{marginTop:"1rem"}}>
   <input type="text" class="form-control fullname" id="floatingInput1" placeholder="Full Name" />
@@ -98,7 +98,7 @@ useEffect(()=>{
   <label for="floatingPassword">Password</label>
 </div>
 
-<button className='btn btn-primary faram' style={{border:"0.1rem  transparent",marginTop:"2rem"}}  onClick={handleLogin}>LogIn</button>
+<button className='btn btn-primary faram' style={{border:"0.1rem solid #F28705",marginTop:"2rem"}}  onClick={handleLogin}>LogIn</button>
 
             </div>
         </div>

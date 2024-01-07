@@ -115,7 +115,7 @@ Swal.fire({
 <form  className='container'>
 
 <div className="input-group" style={{marginTop:"1rem"}}>
-        <input type="file" accept="image/*" enctype="multipart/form-data"   className="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="image" style={{marginBottom:'1rem'}}></input>
+        <input type="file" accept="image/*" enctype="multipart/form-data"   className="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="image" style={{marginBottom:'1rem',border:"0.1rem solid #F28705"}}></input>
         </div>
       
         {/* title */}
@@ -136,7 +136,7 @@ Swal.fire({
     </div> */}
 
     
-    <div class="col" style={{border:"0.01rem solid black"}}>
+    <div class="col" style={{border:"0.01rem solid #F28705"}}>
     {/* <FormatItalicIcon style={{border:"0.01rem solid black",margin:"0.5rem"}} onClick={italicc}></FormatItalicIcon>
     <FormatBoldIcon style={{border:"0.01rem solid black",margin:"0.5rem"}} onClick={bolds}></FormatBoldIcon> */}
     <img src='bold.png' className="" style={{height:'2rem',margin:'0.5rem',border:'0.18rem solid black',padding:"0.2rem"}} onClick={bolds}></img>
@@ -149,13 +149,13 @@ Swal.fire({
 </div>
       <div class="input-group container" style={{marginTop:"2rem"}} >
   
-  <textarea class="form-control" id="inputbox" aria-label="With textarea" style={{height:"25rem",border:'0.1rem solid black',color:clr,fontStyle:txt,backgroundColor:bgclr,fontWeight:bold}}></textarea>
+  <textarea class="form-control" id="inputbox" aria-label="With textarea" style={{height:"25rem",border:'0.1rem solid #F28705',color:clr,fontStyle:txt,backgroundColor:bgclr,fontWeight:bold}}></textarea>
 </div>
 
 <input class="form-control form-control-sm" id="writer" type="text" placeholder="Writer's name" aria-label=".form-control-sm example" style={{borderBottom:"0.01rem solid #F28705",marginTop:"1rem"}}></input>
 
 <div class="d-grid gap-2 container" style={{marginTop:"0.5rem"}}>
-  <button class="btn btn-primary container faram" type="submit" style={{border:'transparent'}} onClick={handleClick} ><b>Publish</b></button>
+  <button class="btn btn-primary container faram" type="submit" style={{border:'0.1rem solid #F28705'}} onClick={handleClick} ><b>Publish</b></button>
  
 </div> </form>
 
