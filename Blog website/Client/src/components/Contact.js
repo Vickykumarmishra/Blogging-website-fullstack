@@ -56,7 +56,7 @@ export default function Contact() {
     <center>  <div className='container' >
         <Navigation></Navigation>
        
-        <div className='container'> <h6>we are here to help and answer any question you might have. We look forward to hearing from you</h6></div>
+        <div className='container'> <p>we are here to help and answer any question you might have. We look forward to hearing from you</p></div>
       <div className='row ' style={{borderRadius:"0.5rem"}}>
 
       <div className='col-sm-12 col-md-12 col-lg-6' style={{float:"left"}}>
@@ -90,7 +90,10 @@ export default function Contact() {
       </div>
         
     </div>
-
+   <div className='row' style={{marginTop:"2rem"}}>
+    <div className='col-sm-12 col-md-6 col-lg-6'><p> <h6><img src='email.gif' style={{height:'3rem'}}></img> Email Us:Blogvista123@gmail.com</h6></p></div>
+    <div className='col-sm-12 col-md-6 col-lg-6'><p> <h6><img src='call.gif' style={{height:'3rem'}}></img> Call Us:123456789</h6></p></div>
+   </div>
     </div></center>
   )
 }
