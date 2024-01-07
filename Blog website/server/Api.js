@@ -2,7 +2,7 @@ const express=require('express');
 const mongoose=require('mongoose');
 const bodyParser = require('body-parser');
 const jwt=require('jsonwebtoken');
-const bcrypt=require('bcrypt');
+const bcryptjs=require('bcryptjs');
 require('./Connection')
 
 const signform=require('./SchemaSign')
@@ -72,7 +72,7 @@ const user = await signform.findOne({ fullname: fullname,email:email });
    return res.status(401).json({ message: 'Authentication failed' });
  }
 
- const isPasswordValid = await bcrypt.compare(passw, user.passw);
+ const isPasswordValid = await bcryptjs.compare(passw, user.passw);
 //true or false will be returned in above variable.
  if (!isPasswordValid) { //!true=false
    return res.status(401).json({ message: 'Authentication failed' });
@@ -126,7 +126,7 @@ app.post('/signup', async (req,res)=>{
       return res.status(400).json({ message: 'User already taken' });
     }
 
-    const hashedPassword=await bcrypt.hash(passw,10);
+    const hashedPassword=await bcryptjs.hash(passw,10);
     const newUser=new signform({fullname,email,passw:hashedPassword});
    
     try {
