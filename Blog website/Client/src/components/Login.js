@@ -24,7 +24,7 @@ export default function Login() {
       }
       
       else{
-        const response = await fetch('http://localhost:8000/login', {
+        const response = await fetch('https://pranpratistha.onrender.com/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

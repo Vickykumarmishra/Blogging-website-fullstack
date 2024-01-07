@@ -26,7 +26,7 @@ export default function Signup() {
     }
     else{
 
-      const url="http://localhost:8000/signup"
+      const url="https://pranpratistha.onrender.com/signup"
       const response = await fetch(url,{
         method:'POST',
         headers:{

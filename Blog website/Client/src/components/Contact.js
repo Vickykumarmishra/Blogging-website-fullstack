@@ -21,7 +21,7 @@ export default function Contact() {
     }
 
     else{
-      const url="http://localhost:8000/contact"
+      const url="https://pranpratistha.onrender.com/contact"
 
       const response=await fetch(url, {
          method:'POST',

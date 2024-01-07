@@ -53,7 +53,7 @@ export default function Mainpage() {
     formData.append('writer',writer);
     
 
-    const url="http://localhost:8000/upload"
+    const url="https://pranpratistha.onrender.com/upload"
     if(title!==''&&text!==''&&image!==''){
 
       let timerInterval;

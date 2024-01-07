@@ -20,7 +20,7 @@ export default function Published() {
     
     const fetchData = async function () {
       try {
-        const response = await axios.get("http://localhost:8000/content");
+        const response = await axios.get("https://pranpratistha.onrender.com/content");
         const data = response.data;
         console.log(data);
         
@@ -34,7 +34,7 @@ export default function Published() {
 
     const fetchEntry = async function () {
       try {
-        const response = await axios.get("http://localhost:8000/totalEntries");
+        const response = await axios.get("https://pranpratistha.onrender.com/totalEntries");
         const totentry = response.data;
         
         console.log(totentry);
