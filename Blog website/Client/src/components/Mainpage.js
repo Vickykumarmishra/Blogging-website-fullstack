@@ -155,7 +155,7 @@ Swal.fire({
 <input class="form-control form-control-sm" id="writer" type="text" placeholder="Writer's name" aria-label=".form-control-sm example" style={{borderBottom:"0.01rem solid #F28705",marginTop:"1rem"}}></input>
 
 <div class="d-grid gap-2 container" style={{marginTop:"0.5rem"}}>
-  <button class="btn btn-primary container faram" type="submit" style={{border:'0.1rem solid #F28705'}} onClick={handleClick} ><b>Publish</b></button>
+  <button class="btn btn-primary container " type="submit" style={{border:'0.1rem solid #F28705',backgroundColor:"#F28705",opacity:"0.8"}} onClick={handleClick} ><b>Publish</b></button>
  
 </div> </form>
 
