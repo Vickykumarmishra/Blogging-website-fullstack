@@ -43,6 +43,29 @@ export default function Signup() {
     }
     else{
 
+      let timerInterval;
+      Swal.fire({
+        title: "Auto close alert!",
+        html: "I will close in <b></b> milliseconds.",
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading();
+          const timer = Swal.getPopup().querySelector("b");
+          timerInterval = setInterval(() => {
+            timer.textContent = `${Swal.getTimerLeft()}`;
+          }, 100);
+        },
+        willClose: () => {
+          clearInterval(timerInterval);
+        }
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log("I was closed by the timer");
+        }
+      });
+      
       const url="https://pranpratistha.onrender.com/signup"
       const response = await fetch(url,{
         method:'POST',
@@ -52,6 +75,8 @@ export default function Signup() {
         body:JSON.stringify({fullname,email,passw})
       });
 
+
+      
       if (response.ok) {
         console.log('response:' , response)
                 navigate('/Login')

@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import {motion} from 'framer-motion'
 import { useRef } from 'react';
 import Trending from './Trending';
+import Swal from 'sweetalert2';
 export default function Published() {
  const [content, setContent] = useState([]);
   const [entry, setEntry] = useState();
@@ -21,6 +22,7 @@ export default function Published() {
     
     const fetchData = async function () {
       try {
+
         const response = await axios.get("https://pranpratistha.onrender.com/content");
         const data = response.data;
         console.log(data);
