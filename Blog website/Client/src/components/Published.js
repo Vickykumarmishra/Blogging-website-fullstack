@@ -7,6 +7,7 @@ import Navigation from './Navigation';
 import { useNavigate } from 'react-router-dom';
 import {motion} from 'framer-motion'
 import { useRef } from 'react';
+import Trending from './Trending';
 export default function Published() {
  const [content, setContent] = useState([]);
   const [entry, setEntry] = useState();
@@ -66,54 +67,26 @@ export default function Published() {
 
   return (
    
-    <div className='container text-center'>
+    <div className=' text-center'>
 
-<Navigation></Navigation>
-   <div className='container'><h6 style={{float:"left",color:"black"}}>Total Blogs:- {info}</h6></div>
-      {/*carousel starts */}
-<div className='container' style={{marginBottom:"1rem"}}>
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style={{borderRadius:"1.5rem"}}>
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="blog1.jpg" class="d-block w-100" alt="..." style={{height:'24rem',borderRadius:"1rem"}}/>
-      <div class="carousel-caption d-none d-md-block">
-        {/* <h5 style={{color:"white",backgroundColor:'#F28705'}}>BlogVista</h5> */}
-        <p style={{color:"white",backgroundColor:'#F28705',opacity:"0.8"}}><b>A perfect place to express your thoughts</b></p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="blog2.jpg" class="d-block w-100" alt="..." style={{height:'24rem',borderRadius:"1rem"}}/>
-      <div class="carousel-caption d-none d-md-block"  >
-        {/* <h5 style={{color:"white",backgroundColor:'#F28705'}}>BlogVista</h5> */}
-        <p style={{color:"white",backgroundColor:'#F28705',opacity:"0.8"}}><b>100k+ happy client over the globe</b></p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="blog3.jpg" class="d-block w-100" alt="..." style={{height:'24rem',borderRadius:"1rem"}}/>
-      <div class="carousel-caption d-none d-md-block">
-        
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev" >
-    <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
-    <span class="visually-hidden" >Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-</div>
-{/*carousel ends*/}
 
+   
+     
+     {/* hero start */}
+
+    <div className='imageback' style={{backgroundImage:`url(${'mountain.jpg'})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center',border:'transparent'}}>
     
-      <div className='row'  >
+       <div style={{backgroundColor: 'rgba(0, 0, 0, 0.7)'}}>
+       <Navigation></Navigation>
+    <div className='container'><h6 style={{float:"left",color:"#F28705"}}>Total Blogs:- {info}</h6></div>
+      <h1 style={{color:'#F28705',marginBottom:'8rem',marginTop:'3rem',padding:'2rem'}}>Trending Blogs</h1>
+      <p style={{color:'#F28705',padding:'2rem'}}>Explore our diverse collection of insightful blogs covering a wide range of topics. From technology trends to lifestyle tips, our blog is a hub of knowledge and inspiration.</p>
+      </div>
+    </div>
+       {/* hero end */}
+
+    <div className='container'>
+      <div className='row'  style={{}}>
        {content.map((soln,index) => {
           const { _id, text, title,writer, imageUrl } = soln;
          // console.log(imageUrl)
@@ -124,16 +97,16 @@ export default function Published() {
               
               
                
-              <motion.div  whileHover={{opacity:"0.8",backgroundColor:'lightyellow'}}  className='card' style={{ width: 'auto',height:"auto", marginBottom: '2rem', backgroundColor: 'white'}}>
+              <motion.div  whileHover={{}}  className='card' style={{ width: 'auto',height:"auto", marginBottom: '2rem',border:"0.1rem solid #F28705"}}>
                 
                   <img    src={imageUrl} className='card-img-top ' alt='...' style={{ width: 'auto',height:"17rem" }} />
               
-                <div className='card-body' style={{height:"auto"}}>
-                  <h5 className='card-title'>
-                    <b>{title}</b> <i>(written by:-{writer})</i> 
+                <div className='card-body' style={{height:"auto",backgroundColor:'rgba(0, 0, 0, 0.7)'}}>
+                  <h5 className='card-title' style={{color:"#F28705"}}>
+                    <b>{title}</b> <h6>(written by:-{writer})</h6> 
                   </h5>
-                  <p className='card-text'>{text}</p>
-                  <p><motion.img whileHover={{scale:1.1}}  transition={{ duration: 0.1 }} src="heart.png" style={{height:'1.5rem',width:'1.5rem',marginRight:'0.5rem'}} ></motion.img>{0}likes</p>
+                  <p className='card-text' style={{color:"white",textAlign: 'justify', textJustify: 'inter-word', textAlignLast: 'left',lineHeight: '1.6'}}>{text}</p>
+                  <p style={{color:'#F28705'}}><motion.img whileHover={{scale:1.1}}  transition={{ duration: 0.1 }} src="heartattack.png" style={{height:'1.2rem',width:'1.2rem',marginRight:'0.5rem',color:'#F28705'}} ></motion.img>{0}likes</p>
                 </div>
               </motion.div>
 
@@ -141,8 +114,9 @@ export default function Published() {
             </div>
           );
          
-        })}
+        })}</div>
 
+    <Trending></Trending>
 
       </div>
       

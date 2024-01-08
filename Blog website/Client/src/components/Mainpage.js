@@ -96,7 +96,9 @@ Swal.fire({
             'success'
           )
     
-          
+          document.getElementById("writer").value=''
+          document.getElementById("inputbox").value=''
+          document.getElementById("title").value=''
         })
         .catch((error)=>{
           console.error("Error:",error)
@@ -115,25 +117,17 @@ Swal.fire({
 <form  className='container'>
 
 <div className="input-group" style={{marginTop:"1rem"}}>
-        <input type="file" accept="image/*" enctype="multipart/form-data"   className="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="image" style={{marginBottom:'1rem',border:"0.1rem solid #F28705"}}></input>
+        <input type="file" accept="image/*" enctype="multipart/form-data"   className="form-control bg-gray-800" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="image" style={{marginBottom:'1rem',border:"0.1rem solid #F28705",backgroundColor:"grey"}}></input>
         </div>
       
         {/* title */}
-      <input class="form-control form-control-sm" id="title" type="text" placeholder="Title" aria-label=".form-control-sm example" style={{borderBottom:"0.01rem solid #F28705"}}></input>
+      <input class="form-control form-control-sm" id="title" type="text" placeholder="Title" aria-label=".form-control-sm example" style={{borderBottom:"0.01rem solid #F28705",backgroundColor:'grey'}}></input>
 
       
 
 <div class="container text-center" style={{margin:"0.5rem"}}>
   <div class="row">
-    {/* <div class="col-sm-6 col-lg-4">
-      
-    <input type="color" class="form-control form-control-color" id="exampleColorInput" onChange={colorPicker}  title="Choose Text Color" style={{margin:"0.5rem"}}  /> 
     
-    </div>
-
-    <div className='col-sm-6 col-lg-4'>
-    <input type="color" class="form-control form-control-color" id="exampleColorbackgr" onChange={bgPicker}  title="Choose Background Color" style={{margin:"0.5rem"}}  /> 
-    </div> */}
 
     
     <div class="col" style={{border:"0.01rem solid #F28705"}}>
@@ -149,10 +143,10 @@ Swal.fire({
 </div>
       <div class="input-group container" style={{marginTop:"2rem"}} >
   
-  <textarea class="form-control" id="inputbox" aria-label="With textarea" style={{height:"25rem",border:'0.1rem solid #F28705',color:clr,fontStyle:txt,backgroundColor:bgclr,fontWeight:bold}}></textarea>
+  <textarea class="form-control" id="inputbox" aria-label="With textarea" style={{height:"25rem",border:'0.1rem solid  #F28705',color:clr,fontStyle:txt,backgroundColor:'grey',fontWeight:bold}}></textarea>
 </div>
 
-<input class="form-control form-control-sm" id="writer" type="text" placeholder="Writer's name" aria-label=".form-control-sm example" style={{borderBottom:"0.01rem solid #F28705",marginTop:"1rem"}}></input>
+<input class="form-control form-control-sm" id="writer" type="text" placeholder="Writer's name" aria-label=".form-control-sm example" style={{borderBottom:"0.01rem solid #F28705",marginTop:"1rem",backgroundColor:"grey"}}></input>
 
 <div class="d-grid gap-2 container" style={{marginTop:"0.5rem"}}>
   <button class="btn btn-primary container " type="submit" style={{border:'0.1rem solid #F28705',backgroundColor:"#F28705",opacity:"0.8"}} onClick={handleClick} ><b>Publish</b></button>

@@ -98,9 +98,9 @@ useEffect(()=>{
   <label for="floatingPassword">Password</label>
 </div>
 
-<button className='btn btn-primary faram' style={{border:"0.1rem solid #F28705",marginTop:"2rem"}}  onClick={handleLogin}>LogIn</button>
+<button className='btn btn-primary ' style={{border:"0.1rem solid #F28705",marginTop:"2rem",backgroundColor:"#F28705"}}  onClick={handleLogin}>LogIn</button>
   
-<p className="signup">
+<p className="signup" style={{color:'white'}}>
             Not signedUp? <a href="/" style={{color:'#F28705'}}>SignUp</a>
           </p>
 

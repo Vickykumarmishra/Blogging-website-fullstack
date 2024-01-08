@@ -15,7 +15,7 @@ export default function Footer() {
 </head>
 
 <body>
-    <div class="footer-clean" style={{borderTop:"0.1rem solid #F28705", marginTop:'1rem'}}>
+    <div class="footer-clean" style={{borderTop:"0.1rem solid grey",color:'#F28705' ,marginTop:'1rem',backgroundColor: 'rgba(0, 0, 0, 0.7)'}}>
         <footer>
             <div class="container">
                 <div class="row justify-content-center">

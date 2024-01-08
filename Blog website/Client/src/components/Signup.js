@@ -82,10 +82,10 @@ export default function Signup() {
   <label for="floatingPassword">Password</label>
 </div>
 
-<p style={{marginBottom:"1rem",marginTop:"1rem"}}><input type="checkbox" class="ui-checkbox"  style={{marginRight:"0.5rem"}}></input>Remember Me</p>
+<p style={{marginBottom:"1rem",marginTop:"1rem",color:'#F28705'}}><input type="checkbox" class="ui-checkbox"  style={{marginRight:"0.5rem"}}></input>Remember Me</p>
 
-        <button type='button' className='btn btn-primary faram' style={{marginTop:'1rem',border:"0.1rem orange",border:"0.1rem solid #F28705"}} onClick={Signed}> SignUp</button>
-        <p className="signin">
+        <button type='button' className='btn btn-primary ' style={{marginTop:'1rem',border:"0.1rem orange",border:"0.1rem solid #F28705",backgroundColor:"#F28705"}} onClick={Signed}> SignUp</button>
+        <p className="signin" style={{color:'white'}}>
             Already signedUp? <a href="/Login" style={{color:"#F28705"}}>Login</a>
           </p>
           </div>

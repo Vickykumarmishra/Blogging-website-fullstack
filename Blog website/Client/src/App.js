@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Protected from './components/Protected';
+import Trending from './components/Trending';
 function App() {
  
   return (
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path='/Published' element={<Protected Component={Published}/>}></Route>
         <Route path='/' element={<Signup/>}></Route>
+        <Route path='/Trending' element={<Trending/>}></Route>
         <Route path='/Login' element={<Login/>}></Route>
 <Route path='/Mainpage' element={<Protected Component={Mainpage}/>}></Route>
 <Route path='/Contact' element={<Protected Component={Contact}/>}></Route>
