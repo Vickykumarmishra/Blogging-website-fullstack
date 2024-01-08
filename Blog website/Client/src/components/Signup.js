@@ -45,7 +45,7 @@ export default function Signup() {
 
       let timerInterval;
       Swal.fire({
-        title: "Auto close alert!",
+        title: "...saving userdata",
         html: "I will close in <b></b> milliseconds.",
         timer: 80000,
         timerProgressBar: true,
