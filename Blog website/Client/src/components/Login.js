@@ -2,10 +2,27 @@ import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Published from './Published';
 import Swal from 'sweetalert2';
+import { useFormik } from 'formik';
+import * as yup from "yup"
+import { loginSchema } from '../validationschema/loginSchema';
 export default function Login() {
     const navigate = useNavigate();
      
-    
+    const initialValues={
+
+      fullname:"",
+      password:"",
+      email:"",
+      }
+
+      const {values,errors,touched,handleBlur,handleChange,handleSubmit}=useFormik({
+        initialValues:initialValues,
+        validationSchema:loginSchema,
+        onSubmit:(values,action)=>{
+        console.log(values);
+        action.resetForm();
+        }
+        })
     const handleLogin = async (e) => {
     
        e.preventDefault();
@@ -86,18 +103,25 @@ useEffect(()=>{
        <div> <h1 style={{color:'#F28705'}}><b>LogIn</b></h1></div>
 
        <div class="form-floating mb-3" style={{marginTop:"1rem"}}>
-  <input type="text" class="form-control fullname" id="floatingInput1" placeholder="Full Name" />
+  <input type="text" class="form-control fullname" id="floatingInput1" placeholder="Full Name" name="fullname" onChange={handleChange}
+          value={values.fullname}  onBlur={handleBlur}/>
   <label for="floatingInput">Full Name</label>
 </div>
+{errors.fullname && touched.fullname?(<p  style={{color:'red'}}className='form-error'>{errors.fullname}</p>):null}
+
             <div class="form-floating mb-3" style={{}}>
-  <input type="email" class="form-control email" id="floatingInput2" placeholder="name@example.com"/>
+  <input type="email" name="email" class="form-control email" id="floatingInput2" placeholder="name@example.com" onChange={handleChange}
+          value={values.email}  onBlur={handleBlur}/>
   <label for="floatingInput">Email address</label>
 </div>
+{errors.email && touched.email?(<p  style={{color:'red'}}className='form-error'>{errors.email}</p>):null}
+
 <div class="form-floating">
-  <input type="password" class="form-control passw" id="floatingPassword" placeholder="Password"/>
+  <input type="password" name="password" class="form-control passw" id="floatingPassword" placeholder="Password" onChange={handleChange}
+          value={values.password}  onBlur={handleBlur}/>
   <label for="floatingPassword">Password</label>
 </div>
-
+{errors.password && touched.password?(<p  style={{color:'red'}}className='form-error'>{errors.password}</p>):null}
 <button className='btn btn-primary ' style={{border:"0.1rem solid #F28705",marginTop:"2rem",backgroundColor:"#F28705"}}  onClick={handleLogin}>LogIn</button>
   
 <p className="signup" style={{color:'white'}}>
