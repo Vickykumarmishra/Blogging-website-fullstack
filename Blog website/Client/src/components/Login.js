@@ -44,7 +44,7 @@ export default function Login() {
 
         let timerInterval;
         Swal.fire({
-          title: "Auto close alert!",
+          title: "...Logging you in!",
           html: "I will close in <b></b> milliseconds.",
           timer: 80000,
           timerProgressBar: true,
