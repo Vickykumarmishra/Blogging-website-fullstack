@@ -47,7 +47,7 @@ export default function Signup() {
       Swal.fire({
         title: "Auto close alert!",
         html: "I will close in <b></b> milliseconds.",
-        timer: 2000,
+        timer: 80000,
         timerProgressBar: true,
         didOpen: () => {
           Swal.showLoading();
@@ -65,7 +65,7 @@ export default function Signup() {
           console.log("I was closed by the timer");
         }
       });
-      
+
       const url="https://pranpratistha.onrender.com/signup"
       const response = await fetch(url,{
         method:'POST',
