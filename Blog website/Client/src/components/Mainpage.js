@@ -121,7 +121,7 @@ Swal.fire({
         </div>
       
         {/* title */}
-      <input class="form-control form-control-sm" id="title" type="text" placeholder="Title" aria-label=".form-control-sm example" style={{borderBottom:"0.01rem solid #F28705",backgroundColor:'grey'}}></input>
+      <input class="form-control form-control-sm" id="title" type="text" placeholder="Title" aria-label=".form-control-sm example" style={{borderBottom:"0.01rem solid #F28705",backgroundColor:'grey',color:'#F28705'}}></input>
 
       
 
@@ -133,9 +133,9 @@ Swal.fire({
     <div class="col" style={{border:"0.01rem solid #F28705"}}>
     {/* <FormatItalicIcon style={{border:"0.01rem solid black",margin:"0.5rem"}} onClick={italicc}></FormatItalicIcon>
     <FormatBoldIcon style={{border:"0.01rem solid black",margin:"0.5rem"}} onClick={bolds}></FormatBoldIcon> */}
-    <img src='bold.png' className="" style={{height:'2rem',margin:'0.5rem',border:'0.18rem solid black',padding:"0.2rem"}} onClick={bolds}></img>
-    <img src='italic.png' style={{height:'2rem',margin:'0.5rem'}} onClick={italicc}></img>
-    <img src='reset.png' style={{height:'2rem',margin:'0.5rem',border:'0.18rem solid black',padding:"0.2rem"}} onClick={reverse} ></img>
+    <img src='bold.png' className="" style={{height:'2rem',width:'2rem',margin:'0.5rem',border:'0.18rem solid black',padding:"0.2rem",backgroundColor:"#F28705"}} onClick={bolds}></img>
+    <img src='italic.png' style={{height:'2rem',margin:'0.5rem',width:'2rem',backgroundColor:"#F28705"}} onClick={italicc}></img>
+    <img src='reset.png' style={{height:'2rem',margin:'0.5rem',width:'2rem',border:'0.18rem solid black',padding:"0.2rem",backgroundColor:"#F28705"}} onClick={reverse} ></img>
     
     </div>
     
@@ -143,10 +143,10 @@ Swal.fire({
 </div>
       <div class="input-group container" style={{marginTop:"2rem"}} >
   
-  <textarea class="form-control" id="inputbox" aria-label="With textarea" style={{height:"25rem",border:'0.1rem solid  #F28705',color:clr,fontStyle:txt,backgroundColor:'grey',fontWeight:bold}}></textarea>
+  <textarea class="form-control" id="inputbox" aria-label="With textarea" style={{height:"25rem",border:'0.1rem solid  #F28705',color:clr,fontStyle:txt,backgroundColor:'grey',fontWeight:bold,color:'#F28705'}}></textarea>
 </div>
 
-<input class="form-control form-control-sm" id="writer" type="text" placeholder="Writer's name" aria-label=".form-control-sm example" style={{borderBottom:"0.01rem solid #F28705",marginTop:"1rem",backgroundColor:"grey"}}></input>
+<input class="form-control form-control-sm" id="writer" type="text" placeholder="Writer's name" aria-label=".form-control-sm example" style={{borderBottom:"0.01rem solid #F28705",marginTop:"1rem",backgroundColor:"grey",color:'#F28705'}}></input>
 
 <div class="d-grid gap-2 container" style={{marginTop:"0.5rem"}}>
   <button class="btn btn-primary container " type="submit" style={{border:'0.1rem solid #F28705',backgroundColor:"#F28705",opacity:"0.8"}} onClick={handleClick} ><b>Publish</b></button>
