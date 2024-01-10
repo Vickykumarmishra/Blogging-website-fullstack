@@ -16,10 +16,10 @@ export default function Navigation() {
 <nav >
 <div className='row'>
   
-  <div className='col-sm-6 col-md-3 col-lg-3'> <a class="nav-link" href="/published" style={{color:"#F28705"}}><b><u>All Blogs</u></b></a></div>
+  <div className='col-sm-6 col-md-4 col-lg-4'> <a class="nav-link" href="/published" style={{color:"#F28705"}}><b><u>All Blogs</u></b></a></div>
   
-  <div className='col-sm-6 col-md-3 col-lg-3'> <a class="nav-link" href="/Contact" style={{color:"#F28705"}}><b><u>ContactUs</u></b></a></div>
-  <div className='col-sm-6 col-md-3 col-lg-3'> <a class="nav-link" href='/Login' style={{color:"#F28705"}} onClick={protection}><b><u>Logout</u></b></a></div>
+  <div className='col-sm-6 col-md-4 col-lg-4'> <a class="nav-link" href="/Contact" style={{color:"#F28705"}}><b><u>ContactUs</u></b></a></div>
+  <div className='col-sm-6 col-md-4 col-lg-4'> <a class="nav-link" href='/Login' style={{color:"#F28705"}} onClick={protection}><b><u>Logout</u></b></a></div>
 </div>
   
  
