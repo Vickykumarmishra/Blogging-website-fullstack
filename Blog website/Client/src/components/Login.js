@@ -5,6 +5,9 @@ import Swal from 'sweetalert2';
 import { useFormik } from 'formik';
 import * as yup from "yup"
 import { loginSchema } from '../validationschema/loginSchema';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function Login() {
     const navigate = useNavigate();
      
@@ -36,34 +39,24 @@ export default function Login() {
           icon: "error",
           title: "Oops...",
           text: "All field are required",
-          footer: 'you must fill all details before Login'
+          footer: 'you must fill all details before Login',
+          iconColor: "#F28705",
+          customClass: {
+            popup: 'error-modal', // Add a class for custom styling
+            title: "tit",
+          
+           
+            footer:'foot',
+            confirmButton: 'confirm',
+          },
+          
         });
+        
       }
       
-      else{
-
-        let timerInterval;
-        Swal.fire({
-          title: "...Logging you in!",
-          html: "I will close in <b></b> milliseconds.",
-          timer: 80000,
-          timerProgressBar: true,
-          didOpen: () => {
-            Swal.showLoading();
-            const timer = Swal.getPopup().querySelector("b");
-            timerInterval = setInterval(() => {
-              timer.textContent = `${Swal.getTimerLeft()}`;
-            }, 100);
-          },
-          willClose: () => {
-            clearInterval(timerInterval);
-          }
-        }).then((result) => {
-          /* Read more about handling dismissals below */
-          if (result.dismiss === Swal.DismissReason.timer) {
-            console.log("I was closed by the timer");
-          }
-        });
+      
+else{
+        
         const response = await fetch('https://pranpratistha.onrender.com/login', {
           method: 'POST',
           headers: {
@@ -71,9 +64,15 @@ export default function Login() {
           },
           body: JSON.stringify({ fullname, email, passw }),
         });
+
+
     
        
+        
+
         if (response.ok) {
+
+         
           const data = await response.json();
           localStorage.setItem('token', data.token);
           
@@ -89,23 +88,39 @@ export default function Login() {
           localStorage.setItem('login',true)
           
           navigate('/Published')
-          Swal.fire({
-            title: "Logged in!",
-            text: "Welcome to BlogVista!",
-            icon: "success"
-          });
+          // Swal.fire({
+          //   title: "Logged in!",
+          //   text: "Welcome to BlogVista!",
+          //   icon: "success"
+          // });
+
+          toast("logged in successfully",{
+            style: {
+              background: "#F28705",
+              color: "black",
+            },
+          })
         } else {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'User does not exist!',
+            iconColor: "#F28705",
             footer: '<p><b>Check your name ,email and password carefully</b></p>',
+            customClass: {
+              popup: 'error-modal', // Add a class for custom styling
+              title: "tit",
+              icon: "iconic",
+              footer:'foot',
+              confirmButton: 'confirm',
+            },
+            iconColor: "#F28705",
           });
         }
       };
     
-     
     }
+    
      
 useEffect(()=>{
   let login=localStorage.getItem('login');
@@ -125,7 +140,7 @@ useEffect(()=>{
             </div>
             <div className='col-lg-6 col-sm-12'>
        <div> <h1 style={{color:'#F28705'}}><b>LogIn</b></h1></div>
-
+   
        <div class="form-floating mb-3" style={{marginTop:"1rem"}}>
   <input type="text" class="form-control fullname" id="floatingInput1" placeholder="Full Name" name="fullname" onChange={handleChange}
           value={values.fullname}  onBlur={handleBlur} style={{border:'0.1rem solid #F28705'}}/>
@@ -146,8 +161,8 @@ useEffect(()=>{
   <label for="floatingPassword">Password</label>
 </div>
 {errors.password && touched.password?(<p  style={{color:'red'}}className='form-error'>{errors.password}</p>):null}
-<button className='btn btn-primary ' style={{border:"0.1rem solid #F28705",marginTop:"2rem",backgroundColor:"#F28705"}}  onClick={handleLogin}>LogIn</button>
-  
+<button className='btn btn-primary ' type='submit' style={{border:"0.1rem solid #F28705",marginTop:"2rem",backgroundColor:"#F28705"}}  onClick={handleLogin}>LogIn</button>
+
 <p className="signup" style={{color:'white'}}>
             Not signedUp? <a href="/" style={{color:'#F28705'}}>SignUp</a>
           </p>

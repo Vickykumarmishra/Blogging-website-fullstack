@@ -62,6 +62,13 @@ Swal.fire({
   html: "I will close in <b></b> milliseconds.",
   timer: 1000000,
   timerProgressBar: true,
+  customClass: {
+    popup: 'error-modal', // Add a class for custom styling
+    title: "tit",
+    icon: "icon",
+    footer:'foot',
+    confirmButton: 'confirm',
+  },
   didOpen: () => {
     Swal.showLoading();
     const timer = Swal.getPopup().querySelector("b");
@@ -90,11 +97,18 @@ Swal.fire({
         })
         .then(()=>{
           console.log("data uploaded successfully")
-          Swal.fire(
-            'saved',
-            'Your information saved to database!',
-            'success'
-          )
+          Swal.fire({
+            title:'Done',
+            text:'Published successfully',
+            icon:'success',
+            customClass: {
+              popup: 'error-modal', // Add a class for custom styling
+              title: "tit",
+              icon: "iconic",
+              footer:'foot',
+              confirmButton: 'confirm',
+            },
+        })
     
           document.getElementById("writer").value=''
           document.getElementById("inputbox").value=''

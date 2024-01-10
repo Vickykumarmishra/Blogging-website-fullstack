@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import * as yup from "yup";
 import Swal from 'sweetalert2'
 import { signUpSchema } from '../validationschema/signUpSchema';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Signup() {
  
 
@@ -34,11 +35,22 @@ export default function Signup() {
     //console.log(passw,fullname,email)
 
     if(fullname==''||email==""||passw==''){
+     
       Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "All field are required",
-        footer: 'you must fill all details before doing signup'
+        footer: 'you must fill all details before Login',
+        iconColor: "#F28705",
+        customClass: {
+          popup: 'error-modal', // Add a class for custom styling
+          title: "tit",
+          icon: "iconic",
+          footer:'foot',
+          confirmButton: 'confirm',
+        },
+        
+        
       });
     }
     else{
@@ -47,8 +59,17 @@ export default function Signup() {
       Swal.fire({
         title: "...saving userdata",
         html: "I will close in <b></b> milliseconds.",
-        timer: 80000,
+        timer: 10000,
         timerProgressBar: true,
+
+        customClass: {
+          popup: 'error-modal', // Add a class for custom styling
+          title: "tit",
+          icon: "iconic",
+          footer:'foot',
+          confirmButton: 'confirm',
+          iconColor: "#F28705",
+        },
         didOpen: () => {
           Swal.showLoading();
           const timer = Swal.getPopup().querySelector("b");
@@ -79,13 +100,25 @@ export default function Signup() {
       
       if (response.ok) {
         console.log('response:' , response)
+        
                 navigate('/Login')
               
-                Swal.fire(
-                    'User Registered Successfully!',
-                    'Now you can login!',
-                    'success'
-                  )
+                Swal.fire({
+                  icon: 'success',
+                  title: 'User Registered Successfully!',
+                  text: 'Now you can login!',
+                  iconColor: "#F28705",
+                  customClass: {
+                    popup: 'error-modal', // Add a class for custom styling
+                    title: "tit",
+                   
+                    footer:'foot',
+                    confirmButton: 'confirm',
+                  },
+                  
+                });
+
+               
             
           // Handle successful signup, e.g., redirect to login or show a success message
         } else {
@@ -94,7 +127,16 @@ export default function Signup() {
                 icon: 'error',
                 title: 'Oops...',
                 text: 'User Already exists!',
-                footer: '<p style="color:red"><b>check username and password carefully</b></p>'
+                footer: '<p style="color:#F28705"><b>check username and password carefully</b></p>',
+                iconColor: "#F28705",
+                customClass: {
+                  popup: 'error-modal', // Add a class for custom styling
+                  title: "tit",
+                  icon: "icon",
+                  
+                  confirmButton: 'confirm',
+                },
+                 
               })
         }
 
@@ -141,7 +183,7 @@ export default function Signup() {
           </div>
 
       </div>
-
+<ToastContainer/>
     </div>
   )
 }

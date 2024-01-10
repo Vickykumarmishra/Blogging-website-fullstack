@@ -10,6 +10,10 @@ import { useRef } from 'react';
 import Trending from './Trending';
 import Swal from 'sweetalert2';
 import { NavLink } from 'react-router-dom';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function Published() {
  const [content, setContent] = useState([]);
   const [entry, setEntry] = useState();
@@ -131,7 +135,7 @@ export default function Published() {
       
     
 
-    
+    <ToastContainer/>
  
     </div>
      

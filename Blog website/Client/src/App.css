@@ -223,9 +223,41 @@
 }
 
 
+
+.error-modal{
+  border:0.1rem solid #F28705;
+  opacity: 0.9;
+  color:#ff9900;
+  
+}
+.confirm{
+  background-color: #F28705 !important;
+  border-color:#F28705 ;
+}
+.foot2{
+  color:#F28705;
+}
 button {
   background-color: #F28705;
 }
+.iconed {
+ 
+   
+    height:4rem;
+  
+}
+
+#inputGroupFile04::-webkit-file-upload-button{
+  background-color: #F28705;
+  color:black;
+  border:0.1rem solid grey
+}
+
+/* .swal2-icon{
+  
+  background-color:#f08605;
+  border-color: white !important;
+} */
 .faram{
   background: linear-gradient(white,#F28705)
 }

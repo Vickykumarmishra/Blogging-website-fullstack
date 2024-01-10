@@ -16,7 +16,16 @@ export default function Contact() {
         icon: "error",
         title: "Oops...",
         text: "All field are required",
-        footer: 'you must fill all details before sending'
+        footer: 'you must fill all details before sending',
+        iconColor: "#F28705",
+        customClass: {
+          popup: 'error-modal', // Add a class for custom styling
+          title: "tit",
+          icon: "iconic",
+          footer:'foot',
+          confirmButton: 'confirm',
+        },
+        
       });
     }
 
@@ -34,11 +43,19 @@ export default function Contact() {
 
       if(response.ok){
         
-        Swal.fire(
-          'saved',
-          'Message sent successfully',
-          'success'
-        )
+        Swal.fire({
+          title:'sent',
+          text:'Message sent successfully',
+          icon:'success',
+          iconColor: "#F28705",
+          customClass: {
+            popup: 'error-modal', // Add a class for custom styling
+            title: "tit",
+            icon: "iconic",
+            footer:'foot',
+            confirmButton: 'confirm',
+          },
+      })
 
         document.getElementById("name").value='';
         document.getElementById("exampleInputEmail1").value='';
@@ -68,17 +85,17 @@ export default function Contact() {
 
       <div class="form-floating mb-3">
     
-    <input type="text" class="form-control " id="name" style={{}} placeholder="Full Name"  />
+    <input type="text" class="form-control " id="name" style={{border:'0.1rem solid #F28705'}} placeholder="Full Name"  />
     <label for="floatingInput">Full Name</label>
   </div>
       <div class=" form-floating mb-3">
     
-    <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" style={{}} placeholder="name@example.com"/>
+    <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" style={{border:'0.1rem solid #F28705'}} placeholder="name@example.com"/>
     <label for="floatingInput">Email address</label>
   </div>
       <div class=" form-floating mb-3" style={{backgroundColor:"transparent"}}>
   
-  <textarea class="form-control " id="exampleFormControlTextarea1" rows="3" style={{}} placeholder='Ask your doubt'></textarea>
+  <textarea class="form-control " id="exampleFormControlTextarea1" rows="3" style={{border:'0.1rem solid #F28705'}} placeholder='Ask your doubt'></textarea>
   <label for="floatingPassword">Ask your doubt</label>
 </div>
 
