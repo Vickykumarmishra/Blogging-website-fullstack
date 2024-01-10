@@ -9,6 +9,7 @@ import {motion} from 'framer-motion'
 import { useRef } from 'react';
 import Trending from './Trending';
 import Swal from 'sweetalert2';
+import { NavLink } from 'react-router-dom';
 export default function Published() {
  const [content, setContent] = useState([]);
   const [entry, setEntry] = useState();
@@ -76,19 +77,25 @@ export default function Published() {
      
      {/* hero start */}
 
-    <div className='imageback' style={{backgroundImage:`url(${'mountain.jpg'})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center',border:'transparent'}}>
+    <div className='imageback' style={{backgroundImage:`url(${'mountain.jpg'})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center',border:'transparent',height:'28rem'}}>
     
-       <div style={{backgroundColor: 'rgba(0, 0, 0, 0.7)'}}>
-       <Navigation></Navigation>
-    <div className='container'><h6 style={{float:"left",color:"#F28705"}}>Total Blogs:- {info}</h6></div>
-      <h1 style={{color:'#F28705',marginBottom:'8rem',marginTop:'3rem',padding:'2rem'}}>Trending Blogs</h1>
-      <p style={{color:'#F28705',padding:'2rem'}}>Explore our diverse collection of insightful blogs covering a wide range of topics. From technology trends to lifestyle tips, our blog is a hub of knowledge and inspiration.</p>
+       <div style={{backgroundColor: 'rgba(0, 0, 0, 0.7)',height:'28rem'}}>
+      <center> <Navigation></Navigation></center>
+    
+      <h1 style={{color:'#F28705',marginBottom:'8rem',marginTop:'3rem',padding:'2rem'}}>BlogVista's Trending Blogs</h1>
+      {/* <p style={{color:'#F28705',padding:'2rem'}}>Explore our diverse collection of insightful blogs covering a wide range of topics. From technology trends to lifestyle tips, our blog is a hub of knowledge and inspiration.</p> */}
+
+     <NavLink to='/Mainpage'> <button  style={{backgroundColor:'#F28705',border:'0.1rem solid #F28705',padding:'0.5rem',marginBottom:'1rem'}}>Create Blog <img src='add.png' style={{height:'1.1rem'}}></img></button></NavLink>
       </div>
+
+
+      {/* <div className='col-sm-6 col-md-3 col-lg-3' ><a class="nav-link active" aria-current="page" href="/Mainpage" style={{color:"#F28705"}}><b><u>Create Blog</u></b></a></div> */}
     </div>
        {/* hero end */}
 
     <div className='container'>
       <div className='row'  style={{}}>
+      <div className='container'><h6 style={{float:"left",color:"#F28705"}}>Total Blogs:- {info}</h6></div>
        {content.map((soln,index) => {
           const { _id, text, title,writer, imageUrl } = soln;
          // console.log(imageUrl)

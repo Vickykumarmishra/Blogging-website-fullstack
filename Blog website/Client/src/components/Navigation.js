@@ -10,12 +10,12 @@ export default function Navigation() {
     
   }
   return (
-    <div className='container' style={{marginTop:"0rem",marginBottom:'1rem'}}>
+   <center> <div className='container' style={{marginTop:"0rem",marginBottom:'1rem'}}>
 
 
 <nav >
 <div className='row'>
-  <div className='col-sm-6 col-md-3 col-lg-3' ><a class="nav-link active" aria-current="page" href="/Mainpage" style={{color:"#F28705"}}><b><u>Create Blog</u></b></a></div>
+  
   <div className='col-sm-6 col-md-3 col-lg-3'> <a class="nav-link" href="/published" style={{color:"#F28705"}}><b><u>All Blogs</u></b></a></div>
   
   <div className='col-sm-6 col-md-3 col-lg-3'> <a class="nav-link" href="/Contact" style={{color:"#F28705"}}><b><u>ContactUs</u></b></a></div>
@@ -28,6 +28,6 @@ export default function Navigation() {
   
 </nav>
       
-    </div>
+    </div></center>
   )
 }
