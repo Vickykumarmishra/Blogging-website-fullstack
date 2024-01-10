@@ -128,21 +128,21 @@ useEffect(()=>{
 
        <div class="form-floating mb-3" style={{marginTop:"1rem"}}>
   <input type="text" class="form-control fullname" id="floatingInput1" placeholder="Full Name" name="fullname" onChange={handleChange}
-          value={values.fullname}  onBlur={handleBlur}/>
+          value={values.fullname}  onBlur={handleBlur} style={{border:'0.1rem solid #F28705'}}/>
   <label for="floatingInput">Full Name</label>
 </div>
 {errors.fullname && touched.fullname?(<p  style={{color:'red'}}className='form-error'>{errors.fullname}</p>):null}
 
             <div class="form-floating mb-3" style={{}}>
   <input type="email" name="email" class="form-control email" id="floatingInput2" placeholder="name@example.com" onChange={handleChange}
-          value={values.email}  onBlur={handleBlur}/>
+          value={values.email}  onBlur={handleBlur} style={{border:'0.1rem solid #F28705'}}/>
   <label for="floatingInput">Email address</label>
 </div>
 {errors.email && touched.email?(<p  style={{color:'red'}}className='form-error'>{errors.email}</p>):null}
 
 <div class="form-floating">
   <input type="password" name="password" class="form-control passw" id="floatingPassword" placeholder="Password" onChange={handleChange}
-          value={values.password}  onBlur={handleBlur}/>
+          value={values.password}  onBlur={handleBlur} style={{border:'0.1rem solid #F28705'}}/>
   <label for="floatingPassword">Password</label>
 </div>
 {errors.password && touched.password?(<p  style={{color:'red'}}className='form-error'>{errors.password}</p>):null}

@@ -222,6 +222,10 @@
   opacity:0.6;
 }
 
+
+button {
+  background-color: #F28705;
+}
 .faram{
   background: linear-gradient(white,#F28705)
 }

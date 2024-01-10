@@ -111,23 +111,23 @@ export default function Signup() {
           </div>
           <div className='col-lg-6 col-sm-12 col-md-12'>
           <div style={{marginBottom:"1rem"}}> <h1 style={{color:'#F28705'}}><b>SignUp</b></h1></div>
-          <div class="form-floating mb-3">
+          <div class="form-floating mb-3" style={{}}>
   <input type="text" class="form-control fullname" id="floatingInput1" placeholder="Full Name" name="fullname" onChange={handleChange}
-          value={values.fullname}  onBlur={handleBlur}/>
+          value={values.fullname}  onBlur={handleBlur} style={{border:'0.1rem solid #F28705'}}/>
   <label for="floatingInput">Full Name</label>
 </div>
 {errors.fullname && touched.fullname?(<p  style={{color:'red'}}className='form-error'>{errors.fullname}</p>):null}
 
           <div class="form-floating mb-3">
   <input type="email" class="form-control email" id="floatingInput2" placeholder="name@example.com" name='email' onChange={handleChange}
-          value={values.email}  onBlur={handleBlur}/>
+          value={values.email}  onBlur={handleBlur} style={{border:'0.1rem solid #F28705'}}/>
   <label for="floatingInput">Email address</label>
 </div>
 {errors.email && touched.email?(<p  style={{color:'red'}}className='form-error'>{errors.email}</p>):null}
 
 <div class="form-floating">
   <input type="password" class="form-control passw" id="floatingPassword" placeholder="Password" name="password" onChange={handleChange}
-          value={values.password}  onBlur={handleBlur}/>
+          value={values.password}  onBlur={handleBlur} style={{border:'0.1rem solid #F28705'}}/>
   <label for="floatingPassword">Password</label>
 </div>
 {errors.password && touched.password?(<p  style={{color:'red'}}className='form-error'>{errors.password}</p>):null}
