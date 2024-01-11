@@ -11,11 +11,14 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import Protected from './components/Protected';
 import Trending from './components/Trending';
+import { useEffect } from 'react';
 function App() {
  
+
+ 
   return (
-    <div className="App">
-<Navbar/>
+    <div className="App" >
+
  
 <BrowserRouter>
       <Routes>

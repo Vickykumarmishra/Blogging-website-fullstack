@@ -3,6 +3,7 @@ import Navigation from './Navigation'
 import Login from './Login';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
 export default function Contact() {
  
  const navigate=useNavigate()
@@ -70,6 +71,8 @@ export default function Contact() {
 
   
   return (
+    <>
+    <Navbar></Navbar>
     <center>  <div className='container' >
         <Navigation></Navigation>
        
@@ -111,6 +114,6 @@ export default function Contact() {
     <div className='col-sm-12 col-md-6 col-lg-6'><p> <h6 style={{color:"#F28705"}}> <img src='emailing.png' style={{height:'2rem'}}></img>Email Us:Blogvista123@gmail.com</h6></p></div>
     <div className='col-sm-12 col-md-6 col-lg-6'><p> <h6 style={{color:"#F28705"}}><img src='phonecall.png' style={{height:'2rem'}}></img> Call Us:123456789</h6></p></div>
    </div>
-    </div></center>
+    </div></center></>
   )
 }

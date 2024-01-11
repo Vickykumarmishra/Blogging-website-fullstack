@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Navigation from './Navigation';
 import Swal from 'sweetalert2'
 import axios from 'axios'
+import Navbar from './Navbar';
 export default function Mainpage() {
  const [clr, setClr]=useState();
  const [txt,setTxt]=useState();
@@ -126,6 +127,8 @@ Swal.fire({
   }
 
   return (
+    <>
+    <Navbar></Navbar>
     <div>
  <Navigation></Navigation>
 <form  className='container'>
@@ -168,6 +171,6 @@ Swal.fire({
 </div> </form>
 
 
-    </div>
+    </div></>
   )
 }

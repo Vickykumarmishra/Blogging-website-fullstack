@@ -10,11 +10,12 @@ import { useRef } from 'react';
 import Trending from './Trending';
 import Swal from 'sweetalert2';
 import { NavLink } from 'react-router-dom';
-
+import Navbar from './Navbar';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Published() {
+  var x=localStorage.getItem('login')
  const [content, setContent] = useState([]);
   const [entry, setEntry] = useState();
   const info=useSelector((state)=>state.counter.count)
@@ -71,9 +72,9 @@ export default function Published() {
   }, []);
   
   
-
   return (
-   
+   <>
+   <Navbar></Navbar>
     <div className=' text-center'>
 
 
@@ -137,7 +138,7 @@ export default function Published() {
 
     <ToastContainer/>
  
-    </div>
+    </div></>
      
   );
 

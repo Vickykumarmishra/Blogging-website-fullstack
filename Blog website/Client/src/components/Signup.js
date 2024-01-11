@@ -6,6 +6,7 @@ import Swal from 'sweetalert2'
 import { signUpSchema } from '../validationschema/signUpSchema';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from './Navbar';
 export default function Signup() {
  
 
@@ -144,6 +145,8 @@ export default function Signup() {
     }
   }
   return (
+    <>
+    <Navbar></Navbar>
     <div className='container'>
       
       <div className='row'>
@@ -184,6 +187,6 @@ export default function Signup() {
 
       </div>
 <ToastContainer/>
-    </div>
+    </div></>
   )
 }

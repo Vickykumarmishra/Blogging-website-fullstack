@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Published from './Published';
 import Swal from 'sweetalert2';
@@ -7,8 +8,14 @@ import * as yup from "yup"
 import { loginSchema } from '../validationschema/loginSchema';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from './Navbar';
+import { createContext } from 'react';
+
+const data=createContext()//creating context here
+
 
 export default function Login() {
+ // const [fullname,setFullname]=useState();
     const navigate = useNavigate();
      
     const initialValues={
@@ -29,9 +36,12 @@ export default function Login() {
     const handleLogin = async (e) => {
     
        e.preventDefault();
+
+
        const email=document.getElementById("floatingInput2").value;
        const passw=document.getElementById("floatingPassword").value;
-       const fullname=document.getElementById("floatingInput1").value;
+      const fullname=document.getElementById("floatingInput1").value;
+     // setFullname(document.getElementById("floatingInput1").value)
 
 
        if(fullname==''||email==""||passw==''){
@@ -56,6 +66,39 @@ export default function Login() {
       
       
 else{
+
+  let timerInterval;
+  Swal.fire({
+    title: "...Logging you in",
+    html: "I will close in <b></b> milliseconds.",
+    timer: 60000,
+    timerProgressBar: true,
+
+    customClass: {
+      popup: 'error-modal', // Add a class for custom styling
+      title: "tit",
+      icon: "iconic",
+      footer:'foot',
+      confirmButton: 'confirm',
+      iconColor: "#F28705",
+    },
+    didOpen: () => {
+      Swal.showLoading();
+      const timer = Swal.getPopup().querySelector("b");
+      timerInterval = setInterval(() => {
+        timer.textContent = `${Swal.getTimerLeft()}`;
+      }, 100);
+    },
+    willClose: () => {
+      clearInterval(timerInterval);
+    }
+  }).then((result) => {
+    /* Read more about handling dismissals below */
+    if (result.dismiss === Swal.DismissReason.timer) {
+      console.log("I was closed by the timer");
+    }
+  });
+
         
         const response = await fetch('https://pranpratistha.onrender.com/login', {
           method: 'POST',
@@ -72,10 +115,11 @@ else{
 
         if (response.ok) {
 
-         
+         Swal.close()
           const data = await response.json();
           localStorage.setItem('token', data.token);
-          
+          localStorage.setItem('username',fullname)
+          localStorage.setItem('email',email)
           const token = data.token;
           const tokenParts = token.split('.');
           /*token.split('.') splits the JWT string into an array of substrings using a dot (.) as the delimiter.
@@ -131,6 +175,12 @@ useEffect(()=>{
    
   
   return (
+    <>
+
+      
+      <Navbar />
+ 
+    
     <div className='container'>
 
         <div className='row'>
@@ -171,5 +221,8 @@ useEffect(()=>{
         </div>
       
     </div>
+    
+    </>
   )
 }
+export {data}
