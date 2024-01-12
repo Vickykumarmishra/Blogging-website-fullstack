@@ -4,6 +4,7 @@ import Login from './Login';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
+import {motion} from 'framer-motion'
 export default function Contact() {
  
  const navigate=useNavigate()

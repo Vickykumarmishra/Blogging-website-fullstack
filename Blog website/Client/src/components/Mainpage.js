@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navigation from './Navigation';
 import Swal from 'sweetalert2'
+import {motion} from 'framer-motion'
 import axios from 'axios'
 import Navbar from './Navbar';
 export default function Mainpage() {
@@ -150,9 +151,9 @@ Swal.fire({
     <div class="col" style={{border:"0.01rem solid #F28705"}}>
     {/* <FormatItalicIcon style={{border:"0.01rem solid black",margin:"0.5rem"}} onClick={italicc}></FormatItalicIcon>
     <FormatBoldIcon style={{border:"0.01rem solid black",margin:"0.5rem"}} onClick={bolds}></FormatBoldIcon> */}
-    <img src='bold.png' className="" style={{height:'2rem',width:'2rem',margin:'0.5rem',border:'0.18rem solid black',padding:"0.2rem",backgroundColor:"#F28705"}} onClick={bolds}></img>
-    <img src='italic.png' style={{height:'2rem',margin:'0.5rem',width:'2rem',backgroundColor:"#F28705"}} onClick={italicc}></img>
-    <img src='reset.png' style={{height:'2rem',margin:'0.5rem',width:'2rem',border:'0.18rem solid black',padding:"0.2rem",backgroundColor:"#F28705"}} onClick={reverse} ></img>
+    <motion.img whileHover={{border:''}} src='bold.png' className="" style={{height:'2rem',width:'2rem',margin:'0.5rem',border:'0.1rem solid black',padding:"0.2rem",backgroundColor:"#F28705"}} onClick={bolds}></motion.img>
+    <motion.img src='italic.png' whileHover={{border:''}} style={{height:'2rem',margin:'0.5rem',width:'2rem',backgroundColor:"#F28705",padding:"0.2rem",border:'0.1rem solid black'}} onClick={italicc}></motion.img>
+    <motion.img src='reset.png' whileHover={{border:''}} style={{height:'2rem',margin:'0.5rem',width:'2rem',border:'0.1rem solid black',padding:"0.2rem",backgroundColor:"#F28705"}} onClick={reverse} ></motion.img>
     
     </div>
     

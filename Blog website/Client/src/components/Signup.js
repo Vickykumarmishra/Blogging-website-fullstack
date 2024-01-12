@@ -3,12 +3,14 @@ import {useFormik} from 'formik'
 import { useNavigate } from 'react-router-dom';
 import * as yup from "yup";
 import Swal from 'sweetalert2'
+import {motion} from 'framer-motion'
 import { signUpSchema } from '../validationschema/signUpSchema';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './Navbar';
+var sign=false
 export default function Signup() {
- 
+
 
   const initialValues={
 
@@ -190,3 +192,4 @@ export default function Signup() {
     </div></>
   )
 }
+export {sign}

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -10,6 +10,9 @@ export default function Navigation() {
   
  localStorage.setItem('token',null)
  localStorage.removeItem("login");//login key will be deleted
+ localStorage.removeItem("username");
+ localStorage.removeItem("email");
+ localStorage.removeItem("role")
  
  navigate("/Login");
 
@@ -24,10 +27,10 @@ export default function Navigation() {
 <nav >
 <div className='row'>
   
-  <div className='col-sm-6 col-md-4 col-lg-4'> <a class="nav-link" href="/published" style={{color:"#F28705"}}><b><u>All Blogs</u></b></a></div>
+  <div className='col-sm-6 col-md-4 col-lg-4'> <a class="nav-link" href="/published" style={{color:"#F28705"}}><motion.b whileHover={{opacity:'0.8'}}><u>All Blogs</u></motion.b></a></div>
   
-  <div className='col-sm-6 col-md-4 col-lg-4'> <a class="nav-link" href="/Contact" style={{color:"#F28705"}}><b><u>ContactUs</u></b></a></div>
-  <div className='col-sm-6 col-md-4 col-lg-4'> <a class="nav-link" href='/Login' style={{color:"#F28705"}} onClick={protection}><b><u>Logout</u></b></a></div>
+  <div className='col-sm-6 col-md-4 col-lg-4'> <a class="nav-link" href="/Contact" style={{color:"#F28705"}}><motion.b whileHover={{opacity:'0.8'}}><u>ContactUs</u></motion.b></a></div>
+  <div className='col-sm-6 col-md-4 col-lg-4'> <a class="nav-link" href='/Login' style={{color:"#F28705"}} onClick={protection}><motion.b whileHover={{opacity:'0.8'}}><u>Logout</u></motion.b></a></div>
 </div>
   
  {/* <button onClick={toaster}>check</button> */}

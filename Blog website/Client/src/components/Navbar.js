@@ -1,5 +1,7 @@
 import React from 'react'
-
+import {motion} from 'framer-motion'
+import Signup from './Signup'
+import {sign} from './Signup'
 export default function Navbar() {
   var email=localStorage.getItem('email')
   var username=localStorage.getItem('username')
@@ -27,10 +29,10 @@ export default function Navbar() {
     {/* offcanvas start */}
 
     <a  data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-    <img src="user.png" style={{height:'3rem',border:'0.15rem solid #F28705',borderRadius:"100%"}} id="user"></img>
+  <motion.img  whileHover={{scale:'1.1'}}   src="user.png" style={{height:'3rem',border:'0.15rem solid #F28705',borderRadius:"100%"}} id="user"></motion.img>
 </a>
 
-
+{/* "easeOut" is a type of easing that starts the animation quickly and slows down towards the end, creating a smooth deceleration effect. */}
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style={{opacity:'0.9'}}>
   <div class="offcanvas-header" style={{backgroundColor:' #F28705',color:'white'}}>
     <h5 class="offcanvas-title" id="offcanvasExampleLabel" style={{}}>User Profile</h5>

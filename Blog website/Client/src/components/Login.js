@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import {motion} from 'framer-motion'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Published from './Published';
