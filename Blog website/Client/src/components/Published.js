@@ -90,7 +90,7 @@ export default function Published() {
       <h1 style={{color:'#F28705',marginBottom:'8rem',marginTop:'3rem',padding:'2rem'}}>BlogVista's Trending Blogs</h1>
       {/* <p style={{color:'#F28705',padding:'2rem'}}>Explore our diverse collection of insightful blogs covering a wide range of topics. From technology trends to lifestyle tips, our blog is a hub of knowledge and inspiration.</p> */}
 
-     <NavLink to='/Mainpage'> <button  style={{backgroundColor:'#F28705',border:'0.1rem solid #F28705',padding:'0.5rem',marginBottom:'1rem'}}>Create Blog <img src='add.png' style={{height:'1.1rem'}}></img></button></NavLink>
+     <NavLink to='/Mainpage'> <button  style={{backgroundColor:'transparent',border:'0.1rem solid #F28705 ',borderRadius:'100%',padding:'0.5rem',marginBottom:'1rem',opacity:'1'}}><img src='create it.png' style={{height:'2.5rem'}}></img></button></NavLink>
       </div>
 
 
