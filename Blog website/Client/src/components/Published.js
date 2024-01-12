@@ -135,15 +135,19 @@ export default function Published() {
          
         })}</div>
 
-    <Trending></Trending>
+    {/* <Trending></Trending> */}
 
       </div>
       
     
 
     <ToastContainer/>
+
+   
  
-    </div></>
+    </div>
+   
+    </>
      
   );
 
