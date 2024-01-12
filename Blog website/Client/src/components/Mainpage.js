@@ -47,6 +47,8 @@ export default function Mainpage() {
      To get the selected file, you should use imageInput.files[0] directly without .value. */
    
     var image = imageInput.files[0];
+
+    console.log('image=',image)
     
     const formData = new FormData();
     formData.append('title', title);
@@ -56,13 +58,13 @@ export default function Mainpage() {
     
 
     const url="https://pranpratistha.onrender.com/upload"
-    if(title!==''&&text!==''&&image!==''){
+    if(title!==''&&text!==''&&image!==undefined &&writer!==''){
 
       let timerInterval;
 Swal.fire({
   title: "Uploading...",
   html: "I will close in <b></b> milliseconds.",
-  timer: 1000000,
+  timer: 60000,
   timerProgressBar: true,
   customClass: {
     popup: 'error-modal', // Add a class for custom styling
@@ -123,6 +125,23 @@ Swal.fire({
     }
     else{
       console.log("all fields must be filled")
+
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "All field are required",
+        footer: 'you must fill all details before Publishing',
+        iconColor: "#F28705",
+        customClass: {
+          popup: 'error-modal', // Add a class for custom styling
+          title: "tit",
+          icon: "iconic",
+          footer:'foot',
+          confirmButton: 'confirm',
+        },
+        
+        
+      });
     }
     
   }
