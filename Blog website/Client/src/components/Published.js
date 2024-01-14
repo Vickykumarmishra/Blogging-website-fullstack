@@ -79,7 +79,7 @@ export default function Published() {
   return (
    <>
    <Navbar></Navbar>
-    <div className=' text-center'>
+    <div className=' text-center' style={{}}>
 
 
    
