@@ -131,7 +131,7 @@ Swal.fire({
         title: "Oops...",
         text: "All field are required",
         footer: 'you must fill all details before Publishing',
-        iconColor: "#F28705",
+        iconColor: "#ED7D31",
         customClass: {
           popup: 'error-modal', // Add a class for custom styling
           title: "tit",
@@ -154,11 +154,11 @@ Swal.fire({
 <form  className='container'>
 
 <div className="input-group" style={{marginTop:"1rem"}}>
-        <input type="file" accept="image/*" enctype="multipart/form-data"   className="form-control bg-gray-800" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="image" style={{marginBottom:'1rem',border:"0.1rem solid #F28705",backgroundColor:"grey"}}></input>
+        <input type="file" accept="image/*" enctype="multipart/form-data"   className="form-control bg-gray-800" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="image" style={{marginBottom:'1rem',border:"0.1rem solid #ED7D31",backgroundColor:"#6C5F5B"}}></input>
         </div>
       
         {/* title */}
-      <input class="form-control form-control-sm" id="title" type="text" placeholder="Title" aria-label=".form-control-sm example" style={{borderBottom:"0.01rem solid #F28705",backgroundColor:'grey',color:'#F28705'}}></input>
+      <input class="form-control form-control-sm" id="title" type="text" placeholder="Title" aria-label=".form-control-sm example" style={{borderBottom:"0.01rem solid #ED7D31",backgroundColor:'#6C5F5B',color:'#ED7D31'}}></input>
 
       
 
@@ -167,12 +167,12 @@ Swal.fire({
     
 
     
-    <div class="col" style={{border:"0.01rem solid #F28705"}}>
+    <div class="col" style={{border:"0.01rem solid #ED7D31"}}>
     {/* <FormatItalicIcon style={{border:"0.01rem solid black",margin:"0.5rem"}} onClick={italicc}></FormatItalicIcon>
     <FormatBoldIcon style={{border:"0.01rem solid black",margin:"0.5rem"}} onClick={bolds}></FormatBoldIcon> */}
-    <motion.img whileHover={{border:''}} src='bold.png' className="" style={{height:'2rem',width:'2rem',margin:'0.5rem',border:'0.1rem solid black',padding:"0.2rem",backgroundColor:"#F28705"}} onClick={bolds}></motion.img>
-    <motion.img src='italic.png' whileHover={{border:''}} style={{height:'2rem',margin:'0.5rem',width:'2rem',backgroundColor:"#F28705",padding:"0.2rem",border:'0.1rem solid black'}} onClick={italicc}></motion.img>
-    <motion.img src='reset.png' whileHover={{border:''}} style={{height:'2rem',margin:'0.5rem',width:'2rem',border:'0.1rem solid black',padding:"0.2rem",backgroundColor:"#F28705"}} onClick={reverse} ></motion.img>
+    <motion.img whileHover={{border:''}} src='bold.png' className="" style={{height:'2rem',width:'2rem',margin:'0.5rem',border:'0.1rem solid black',padding:"0.2rem",backgroundColor:"#ED7D31"}} onClick={bolds}></motion.img>
+    <motion.img src='italic.png' whileHover={{border:''}} style={{height:'2rem',margin:'0.5rem',width:'2rem',backgroundColor:"#ED7D31",padding:"0.2rem",border:'0.1rem solid black'}} onClick={italicc}></motion.img>
+    <motion.img src='reset.png' whileHover={{border:''}} style={{height:'2rem',margin:'0.5rem',width:'2rem',border:'0.1rem solid black',padding:"0.2rem",backgroundColor:"#ED7D31"}} onClick={reverse} ></motion.img>
     
     </div>
     
@@ -180,13 +180,13 @@ Swal.fire({
 </div>
       <div class="input-group container" style={{marginTop:"2rem"}} >
   
-  <textarea class="form-control" id="inputbox" aria-label="With textarea" style={{height:"25rem",border:'0.1rem solid  #F28705',color:clr,fontStyle:txt,backgroundColor:'grey',fontWeight:bold,color:'#F28705'}}></textarea>
+  <textarea class="form-control" id="inputbox" aria-label="With textarea" style={{height:"25rem",border:'0.1rem solid  #ED7D31',color:clr,fontStyle:txt,backgroundColor:'#6C5F5B',fontWeight:bold,color:'#ED7D31'}}></textarea>
 </div>
 
-<input class="form-control form-control-sm" id="writer" type="text" placeholder="Writer's name" aria-label=".form-control-sm example" style={{borderBottom:"0.01rem solid #F28705",marginTop:"1rem",backgroundColor:"grey",color:'#F28705'}}></input>
+<input class="form-control form-control-sm" id="writer" type="text" placeholder="Writer's name" aria-label=".form-control-sm example" style={{borderBottom:"0.01rem solid #ED7D31",marginTop:"1rem",backgroundColor:"#6C5F5B",color:'#ED7D31'}}></input>
 
 <div class="d-grid gap-2 container" style={{marginTop:"0.5rem"}}>
-  <button class="btn btn-primary container " type="submit" style={{border:'0.1rem solid #F28705',backgroundColor:"#F28705",opacity:"0.8"}} onClick={handleClick} ><img src='send.png' style={{height:"2rem",marginRight:'0.5rem'}}></img><b style={{color:"black"}}>Publish</b></button>
+  <button class="btn btn-primary container " type="submit" style={{border:'0.1rem solid #ED7D31',backgroundColor:"#ED7D31",opacity:"0.8"}} onClick={handleClick} ><img src='send.png' style={{height:"2rem",marginRight:'0.5rem'}}></img><b style={{color:"black"}}>Publish</b></button>
  
 </div> </form>
 

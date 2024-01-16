@@ -1,37 +1,55 @@
 import React from 'react'
-
+function loaded(){
+  
+}
 export default function Trending() {
   return (
-    <div>
+    <div className='container' onLoad={loaded}>
 
-        <div className='row'style={{height:'18rem',marginBottom:'1rem',color:'#F28705 !important'}}>
-               
-               <div className='col-sm-12 col-lg-4' >
+<div className='row'>
+<h1 style={{color:'#ED7D31'}}>Testimonials</h1>
+<div className='col-sm-12 col-md-6 col-lg-4'>
 
-               <div class="card text-bg-dark" style={{}}>
-  <img src="black car.jpeg" class="card-img img-fluid" alt="..." style={{height:'10rem',opacity:'0.8'}}/>
-  <div class="card-img-overlay">
-    <h5 class="card-title">Vicky K.M</h5>
-    <p class="card-text"></p>
-    <p class="card-text"><small>Last updated 3 mins ago</small></p>
-  </div>
+<figure class="snip1390">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample3.jpg" alt="profile-sample3" class="profile" />
+  <figcaption>
+    <h2>Eleanor Crisp</h2>
+    <h4>UX Design</h4>
+    <blockquote>Dad buried in landslide! Jubilant throngs fill streets! Stunned father inconsolable - demands recount!</blockquote>
+  </figcaption>
+</figure>
 
 </div>
-               </div>
 
-               <div className='col-sm-4 col-lg-3'>
+<div className='col-sm-12 col-md-6 col-lg-4'>
 
-               </div>
+<figure class="snip1390 hover"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample5.jpg" alt="profile-sample5" class="profile" />
+  <figcaption>
+    <h2>Gordon</h2>
+    <h4>Accountant</h4>
+    <blockquote>Wormwood : Calvin, how about you? Calvin : Hard to say ma'am. I think my cerebellum has just fused. </blockquote>
+  </figcaption>
+</figure>
 
-               <div className='col-sm-4 col-lg-3'>
+</div>
 
-               </div>
-               
-               <div className='col-sm-4 col-lg-3'>
+<div className='col-sm-12 col-md-6 col-lg-4'>
 
-               </div>
-        </div>
+<figure class="snip1390"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample6.jpg" alt="profile-sample6" class="profile" />
+  <figcaption>
+    <h2>Sue Shei</h2>
+    <h4>Public Relations</h4>
+    <blockquote>The strength to change what I can, the inability to accept what I can't and the incapacity to tell the difference.</blockquote>
+  </figcaption>
+</figure>
+
+</div>
+
+
+
+
       
+</div>
     </div>
   )
 }

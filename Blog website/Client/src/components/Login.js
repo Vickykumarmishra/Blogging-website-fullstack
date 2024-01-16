@@ -51,7 +51,7 @@ export default function Login() {
           title: "Oops...",
           text: "All field are required",
           footer: 'you must fill all details before Login',
-          iconColor: "#F28705",
+          iconColor: "#ED7D31",
           customClass: {
             popup: 'error-modal', // Add a class for custom styling
             title: "tit",
@@ -81,7 +81,7 @@ else{
       icon: "iconic",
       footer:'foot',
       confirmButton: 'confirm',
-      iconColor: "#F28705",
+      iconColor: "#ED7D31",
     },
     didOpen: () => {
       Swal.showLoading();
@@ -141,7 +141,7 @@ else{
 
           toast("logged in successfully",{
             style: {
-              background: "#F28705",
+              background: "#ED7D31",
               color: "black",
             },
           })
@@ -150,7 +150,7 @@ else{
             icon: 'error',
             title: 'Oops...',
             text: 'User does not exist!',
-            iconColor: "#F28705",
+            iconColor: "#ED7D31",
             footer: '<p><b>Check your name ,email and password carefully</b></p>',
             customClass: {
               popup: 'error-modal', // Add a class for custom styling
@@ -159,7 +159,7 @@ else{
               footer:'foot',
               confirmButton: 'confirm',
             },
-            iconColor: "#F28705",
+            iconColor: "#ED7D31",
           });
         }
       };
@@ -190,32 +190,32 @@ useEffect(()=>{
                 <img src='login 11.png' className='img-fluid'></img>
             </div>
             <div className='col-lg-6 col-sm-12'>
-       <div> <h1 style={{color:'#F28705'}}><b>LogIn</b></h1></div>
+       <div> <h1 style={{color:'#ED7D31'}}><b>LogIn</b></h1></div>
    
        <div class="form-floating mb-3" style={{marginTop:"1rem"}}>
   <input type="text" class="form-control fullname" id="floatingInput1" placeholder="Full Name" name="fullname" onChange={handleChange}
-          value={values.fullname}  onBlur={handleBlur} style={{border:'0.1rem solid #F28705'}}/>
+          value={values.fullname}  onBlur={handleBlur} style={{border:'0.1rem solid #ED7D31'}}/>
   <label for="floatingInput">Full Name</label>
 </div>
 {errors.fullname && touched.fullname?(<p  style={{color:'red'}}className='form-error'>{errors.fullname}</p>):null}
 
             <div class="form-floating mb-3" style={{}}>
   <input type="email" name="email" class="form-control email" id="floatingInput2" placeholder="name@example.com" onChange={handleChange}
-          value={values.email}  onBlur={handleBlur} style={{border:'0.1rem solid #F28705'}}/>
+          value={values.email}  onBlur={handleBlur} style={{border:'0.1rem solid #ED7D31'}}/>
   <label for="floatingInput">Email address</label>
 </div>
 {errors.email && touched.email?(<p  style={{color:'red'}}className='form-error'>{errors.email}</p>):null}
 
 <div class="form-floating">
   <input type="password" name="password" class="form-control passw" id="floatingPassword" placeholder="Password" onChange={handleChange}
-          value={values.password}  onBlur={handleBlur} style={{border:'0.1rem solid #F28705'}}/>
+          value={values.password}  onBlur={handleBlur} style={{border:'0.1rem solid #ED7D31'}}/>
   <label for="floatingPassword">Password</label>
 </div>
 {errors.password && touched.password?(<p  style={{color:'red'}}className='form-error'>{errors.password}</p>):null}
-<button className='btn btn-primary ' type='submit' style={{border:"0.1rem solid #F28705",marginTop:"2rem",backgroundColor:"#F28705"}}  onClick={handleLogin}>LogIn</button>
+<button className='btn btn-primary ' type='submit' style={{border:"0.1rem solid #ED7D31",marginTop:"2rem",backgroundColor:"#ED7D31"}}  onClick={handleLogin}>LogIn</button>
 
 <p className="signup" style={{color:'white'}}>
-            Not signedUp? <a href="/" style={{color:'#F28705'}}>SignUp</a>
+            Not signedUp? <a href="/" style={{color:'#ED7D31'}}>SignUp</a>
           </p>
 
             </div>
