@@ -35,7 +35,7 @@ export default function Navbar() {
 {/* "easeOut" is a type of easing that starts the animation quickly and slows down towards the end, creating a smooth deceleration effect. */}
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style={{opacity:'0.9'}}>
   <div class="offcanvas-header" style={{backgroundColor:'#ED7D31',color:'white'}}>
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel" style={{}}>User Profile</h5>
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel" style={{color:''}}>User Profile</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style={{color:'white'}}></button>
   </div>
   <div class="offcanvas-body" style={{backgroundColor:'rgba(0, 0, 0, 0.7)',color:"#ED7D31"}}>

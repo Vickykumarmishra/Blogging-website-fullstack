@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import './App.css';
+
+import './Trending.css'
 import Mainpage from './components/Mainpage';
 import Published from './components/Published';
 import Navbar from './components/Navbar';
