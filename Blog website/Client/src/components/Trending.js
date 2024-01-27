@@ -7,7 +7,7 @@ export default function Trending() {
     <div className='' onLoad={loaded}>
 
 <div className='row' style={{marginBottom:'1rem'}}>
-<h4 style={{color:'#ED7D31',float:'left',marginBottom:'1rem'}}>what are our clients says</h4>
+<div className='col-sm-12 col-md-6 col-lg-6'><h5 style={{color:'#ED7D31',float:'left',marginBottom:'1rem'}}>what are our clients says</h5></div>
 {/* <div className='col-sm-12 col-md-6 col-lg-4'>
 
 <figure class="snip1390">

@@ -95,7 +95,7 @@ export default function Published() {
   transition={{ ease: "easeOut", duration: 1 }} style={{color:'#ED7D31',marginBottom:'8rem',marginTop:'3rem',padding:'2rem',scale:0.2}}>BlogVista's Trending Blogs</motion.h1>
       {/* <p style={{color:'#ED7D31',padding:'2rem'}}>Explore our diverse collection of insightful blogs covering a wide range of topics. From technology trends to lifestyle tips, our blog is a hub of knowledge and inspiration.</p> */}
 
-     <NavLink to='/Mainpage'> <motion.button   whileHover={{boxShadow:'1px 1px 2px #ED7D31, 0 0 25px #ED7D31, 0 0 5px #ED7D31'}} transition={{duration:0.5}} style={{backgroundColor:'transparent',border:'0.1rem solid #ED7D31 ',borderRadius:'100%',padding:'0.5rem',marginBottom:'1rem',opacity:'1'}} id='create' ><img src='create it.png' style={{height:'2.5rem'}}></img></motion.button></NavLink>
+     <NavLink to='/Mainpage'> <motion.button   whileHover={{boxShadow:'1px 1px 2px white, 0 0 25px white, 0 0 5px #ED7D31'}} transition={{duration:0.5}} style={{backgroundColor:'transparent',border:'0.1rem solid #ED7D31 ',borderRadius:'100%',padding:'0.5rem',marginBottom:'1rem',opacity:'1',boxShadow:'1px 1px 2px #ED7D31, 0 0 25px #ED7D31, 0 0 5px #ED7D31'}} id='create' ><img src='create it.png' style={{height:'2.5rem'}}></img></motion.button></NavLink>
       </div>
 {/*  whileHover={{opacity:'0.8'}} transition={{duration:3}} */}
 
