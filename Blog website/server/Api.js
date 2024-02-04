@@ -79,7 +79,7 @@ const user = await signform.findOne({ fullname: fullname,email:email });
  }
 
  let token;
- if (fullname === "Vicky1999") {
+ if (fullname === "Vicky1999" && email==="mishravicky0141@gmail.com") {
    //generating token for admin role
    token = jwt.sign({ userId: user._id, role: 'admin' }, 'your_secret_key', { expiresIn: '1h' });
  } else {
