@@ -32,7 +32,7 @@ export default function Contact() {
     }
 
     else{
-      const url="https://pranpratistha.onrender.com/contact"
+      const url="https://blogging-website-fullstack.onrender.com/contact"
 
       const response=await fetch(url, {
          method:'POST',

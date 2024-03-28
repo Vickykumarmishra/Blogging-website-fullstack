@@ -90,7 +90,7 @@ export default function Signup() {
         }
       });
 
-      const url="https://pranpratistha.onrender.com/signup"
+      const url="https://blogging-website-fullstack.onrender.com/signup"
       const response = await fetch(url,{
         method:'POST',
         headers:{

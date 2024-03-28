@@ -57,7 +57,7 @@ export default function Mainpage() {
     formData.append('writer',writer);
     
 
-    const url="https://pranpratistha.onrender.com/upload"
+    const url="https://blogging-website-fullstack.onrender.com/upload"
     if(title!==''&&text!==''&&image!==undefined &&writer!==''){
 
       let timerInterval;

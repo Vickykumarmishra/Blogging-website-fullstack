@@ -33,7 +33,7 @@ export default function Published() {
     const fetchData = async function () {
       try {
 
-        const response = await axios.get("https://pranpratistha.onrender.com/content");
+        const response = await axios.get("https://blogging-website-fullstack.onrender.com/content");
         const data = response.data;
         console.log(data);
         
@@ -47,7 +47,7 @@ export default function Published() {
 
     const fetchEntry = async function () {
       try {
-        const response = await axios.get("https://pranpratistha.onrender.com/totalEntries");
+        const response = await axios.get("https://blogging-website-fullstack.onrender.com/totalEntries");
         const totentry = response.data;
         
         console.log(totentry);
